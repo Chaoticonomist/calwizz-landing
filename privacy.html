@@ -175,7 +175,7 @@
     <div class="container">
         <div class="legal-header">
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: February 20, 2026</p>
+            <p class="last-updated">Last Updated: April 1, 2026</p>
         </div>
 
         <div class="legal-content">
@@ -192,11 +192,19 @@
             <h3>1.2 Calendar Data</h3>
             <ul>
                 <li><strong>Google Calendar Access:</strong> With your explicit permission, we access your Google Calendar data including event titles, times, attendees, locations, and descriptions.</li>
-                <li><strong>Data Processing:</strong> Calendar analysis is performed client-side in your browser. Your raw calendar event data is never permanently stored on our servers.</li>
+                <li><strong>Calendar Write Access:</strong> If you enable Focus Time Protection or Lunch Protection, CalWizz creates events on your Google Calendar on your behalf. These events are clearly labeled (e.g., "Focus Time (CalWizz)", "Lunch (CalWizz)") and tagged with metadata so CalWizz can manage them. CalWizz never modifies or deletes events it did not create.</li>
+                <li><strong>Data Processing:</strong> Calendar analysis is performed in your browser or on our servers when syncing. Cached calendar data is used to compute analytics and may be temporarily stored to improve performance.</li>
                 <li><strong>OAuth Tokens:</strong> We securely store encrypted Google OAuth tokens to enable automatic calendar syncing.</li>
             </ul>
 
-            <h3>1.3 Automatically Collected Information</h3>
+            <h3>1.3 Chrome Extension Data</h3>
+            <ul>
+                <li><strong>Extension Authentication:</strong> When you sign in to the CalWizz Chrome extension, we issue an API token stored locally in Chrome's extension storage. This token is used to authenticate requests to our API.</li>
+                <li><strong>Data Stored Locally:</strong> The extension caches your schedule health score and meeting statistics in Chrome's local storage for offline display. This data never leaves your browser.</li>
+                <li><strong>Google Calendar Overlay:</strong> The extension injects a small widget on calendar.google.com to display your health score. No data from Google Calendar's page is read or transmitted by this widget.</li>
+            </ul>
+
+            <h3>1.4 Automatically Collected Information</h3>
             <ul>
                 <li><strong>Usage Data:</strong> We collect information about how you interact with our service, including features used and pages viewed.</li>
                 <li><strong>Session Information:</strong> Login times, session duration, IP addresses, and browser information.</li>
@@ -274,9 +282,18 @@
                 <li>You can disconnect your Google Calendar at any time from Account Settings</li>
                 <li>You can revoke CalWizz's access through your Google Account settings</li>
                 <li>Disconnecting will delete all cached calendar data from our servers</li>
+                <li>You can disable Focus Time and Lunch Protection at any time; CalWizz will remove all events it created</li>
+                <li>You can also manually delete any CalWizz-created event directly from Google Calendar</li>
             </ul>
 
-            <h3>5.3 Marketing Communications</h3>
+            <h3>5.3 Chrome Extension</h3>
+            <ul>
+                <li>You can uninstall the CalWizz Chrome extension at any time from chrome://extensions</li>
+                <li>Uninstalling removes all locally stored data (token, cached scores)</li>
+                <li>The extension does not collect browsing history or activity outside of calendar.google.com</li>
+            </ul>
+
+            <h3>5.4 Marketing Communications</h3>
             <ul>
                 <li>We may send you service updates and account notifications</li>
                 <li>You can opt out of promotional emails at any time</li>

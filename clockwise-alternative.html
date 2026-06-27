@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clockwise Alternative - CalWizz | Calendar Analytics & Focus Time Protection</title>
+    <meta name="description" content="Looking for a Clockwise alternative after the shutdown? CalWizz offers schedule health scoring, focus time protection, meeting analytics, and a Chrome extension. Free forever tier. Switch in minutes.">
+    <meta name="keywords" content="clockwise alternative, clockwise replacement, clockwise shutdown, clockwise shut down, calendar optimization, focus time, meeting analytics, schedule health, clockwise migration">
+    <link rel="canonical" href="https://www.calwizz.com/clockwise-alternative">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/CalWizz-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.calwizz.com/clockwise-alternative">
+    <meta property="og:title" content="Clockwise Alternative - CalWizz | Free Calendar Analytics">
+    <meta property="og:description" content="Clockwise shut down. CalWizz is here. Schedule health scores, focus time protection, meeting analytics, and a Chrome extension. Free forever tier.">
+    <meta property="og:image" content="https://www.calwizz.com/CalWizz-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CalWizzApp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CalWizz",
+      "applicationCategory": "BusinessApplication",
+      "description": "Calendar analytics and focus time protection tool. Alternative to Clockwise.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free forever tier with core analytics"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --green-900: #1a3d26;
+            --green-800: #1f4a2d;
+            --green-700: #2d5a3d;
+            --green-600: #3d6b4d;
+            --green-500: #4a7c5c;
+            --green-400: #6b9a7a;
+            --green-300: #8db48e;
+            --green-200: #c2d9c4;
+            --green-100: #e8f0e9;
+            --cream: #faf9f6;
+            --cream-dark: #f5f4f0;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+            --accent-gold: #d4a853;
+            --accent-red: #dc2626;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--cream);
+        }
+
+        h1, h2, h3, .btn {
+            font-family: 'Cabinet Grotesk', 'Plus Jakarta Sans', sans-serif;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header */
+        header {
+            background: var(--cream-dark);
+            color: var(--green-700);
+            padding: 5px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 80px; width: auto; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--green-700); font-weight: 500; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; padding: 10px; z-index: 101; }
+        .hamburger span { width: 25px; height: 3px; background: var(--green-700); margin: 3px 0; transition: 0.3s; border-radius: 2px; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(145deg, var(--green-900), var(--green-700) 50%, var(--green-600));
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+        .hero .container { max-width: 900px; margin: 0 auto; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .hero h1 .accent { color: var(--accent-gold); }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9; line-height: 1.6; }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: white;
+            color: var(--green-700);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+            margin-left: 12px;
+        }
+        .btn-secondary:hover { border-color: white; }
+        .btn-green {
+            background: var(--green-700);
+            color: white;
+        }
+        .btn-green:hover { background: var(--green-600); transform: translateY(-2px); }
+
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .trust-row {
+            display: flex; gap: 32px; justify-content: center; margin-top: 40px;
+            font-size: 14px; opacity: 0.8; flex-wrap: wrap;
+        }
+        .trust-row span::before { content: '\2713\00a0'; color: var(--green-300); }
+
+        /* Sections */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 20px; }
+        section h2 { font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 16px; }
+        section .subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 50px; }
+
+        /* What happened */
+        .context-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 4px solid var(--accent-red);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .context-box h3 { font-size: 1.4rem; margin-bottom: 12px; }
+        .context-box p { color: var(--text-muted); line-height: 1.8; }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-top: 20px;
+        }
+        .comparison-table th {
+            background: var(--green-700);
+            color: white;
+            padding: 16px 20px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .comparison-table th:first-child { border-radius: 16px 0 0 0; }
+        .comparison-table th:last-child { border-radius: 0 16px 0 0; }
+        .comparison-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover td { background: var(--green-100); }
+        .comparison-table .check { color: var(--green-700); font-weight: 700; }
+        .comparison-table .cross { color: #ccc; }
+        .comparison-table .highlight { background: var(--green-100); }
+        .comparison-table .feature-name { font-weight: 600; }
+
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+        .feature-card:hover { transform: translateY(-4px); }
+        .feature-icon { font-size: 36px; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+        .feature-card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+        .badge-free {
+            display: inline-block;
+            background: var(--green-100);
+            color: var(--green-700);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .badge-coming {
+            display: inline-block;
+            background: #fff3e0;
+            color: #e65100;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* Migration CTA */
+        .migration-cta {
+            background: linear-gradient(145deg, var(--green-900), var(--green-700));
+            color: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .migration-cta h2 { color: white; margin-bottom: 16px; }
+        .migration-cta p { opacity: 0.9; max-width: 600px; margin: 0 auto 32px; font-size: 1.1rem; }
+
+        /* Pricing */
+        .pricing-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .price-card {
+            background: white;
+            border-radius: 16px;
+            padding: 36px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .price-card.featured {
+            border: 2px solid var(--green-700);
+            position: relative;
+        }
+        .price-card .price { font-size: 2.5rem; font-weight: 800; color: var(--green-700); }
+        .price-card .period { color: var(--text-muted); font-size: 14px; }
+        .price-card h3 { font-size: 1.3rem; margin: 12px 0 8px; }
+        .price-card ul { list-style: none; text-align: left; margin: 20px 0; }
+        .price-card li { padding: 6px 0; font-size: 14px; color: var(--text-muted); }
+        .price-card li::before { content: '\2713\00a0'; color: var(--green-700); font-weight: 700; }
+
+        /* FAQ */
+        .faq-list { max-width: 700px; margin: 0 auto; }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-item h3 { font-size: 1rem; margin-bottom: 8px; }
+        .faq-item p { color: var(--text-muted); font-size: 15px; }
+
+        /* Footer */
+        footer {
+            background: var(--green-900);
+            color: rgba(255,255,255,0.8);
+            padding: 60px 20px 30px;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 40px;
+        }
+        .footer-section h4 { color: white; font-size: 14px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-section a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; padding: 4px 0; font-size: 14px; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+                background: var(--cream-dark); flex-direction: column; justify-content: center;
+                align-items: center; gap: 24px; z-index: 100;
+            }
+            .nav-links.active { display: flex; }
+            .hero { padding: 60px 20px 50px; }
+            .hero h1 { font-size: 2rem; }
+            .comparison-table { font-size: 13px; }
+            .comparison-table th, .comparison-table td { padding: 10px 12px; }
+            .btn-secondary { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo"><img src="/CalWizz-logo.png" alt="CalWizz"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features" onclick="closeMenu()">Features</a>
+                <a href="/#pricing" onclick="closeMenu()">Pricing</a>
+                <a href="https://blog.calwizz.com" onclick="closeMenu()">Blog</a>
+                <a href="https://app.calwizz.com" class="btn btn-green" style="padding: 10px 20px; font-size: 16px;">Launch App</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">Clockwise Shut Down on March 27, 2026</div>
+                <h1>The <span class="accent">Clockwise Alternative</span> That's Free Forever</h1>
+                <p>Clockwise is gone. CalWizz gives you schedule health scoring, focus time protection, meeting analytics, and a Chrome extension that lives right on Google Calendar. Switch in under 2 minutes.</p>
+                <div class="hero-ctas">
+                    <a href="https://app.calwizz.com" class="btn btn-primary">Start Free &mdash; No Credit Card</a>
+                    <a href="#comparison" class="btn btn-secondary">See the Comparison</a>
+                </div>
+                <div class="trust-row">
+                    <span>Google Calendar OAuth</span>
+                    <span>Free forever tier</span>
+                    <span>No credit card required</span>
+                    <span>2-minute setup</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- What happened -->
+        <section>
+            <div class="container">
+                <h2>What Happened to Clockwise?</h2>
+                <p class="subtitle">On March 27, 2026, Clockwise shut down after Salesforce acqui-hired the team for their Agentforce initiative. 40,000+ organizations lost their calendar optimization tool overnight.</p>
+                <div class="context-box">
+                    <h3>If you're here, you probably relied on Clockwise for:</h3>
+                    <p>Focus time protection, automatic meeting rescheduling, schedule health insights, lunch time holds, or the Chrome extension overlay on Google Calendar. CalWizz already covers most of these &mdash; and we're shipping the rest fast.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison -->
+        <section id="comparison" style="background: var(--cream-dark);">
+            <div class="container">
+                <h2>CalWizz vs. Clockwise</h2>
+                <p class="subtitle">Here's what CalWizz offers today &mdash; and what's shipping soon.</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Clockwise (RIP)</th>
+                            <th>CalWizz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Schedule Health Scoring</td>
+                            <td class="cross">&times;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Meeting Analytics &amp; Patterns</td>
+                            <td class="check">&check;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Focus Time Analysis</td>
+                            <td class="check">&check;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Focus Time Auto-Blocking</td>
+                            <td class="check">&check;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Lunch Time Protection</td>
+                            <td class="check">&check;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Chrome Extension</td>
+                            <td class="check">&check;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Google Calendar Overlay Widget</td>
+                            <td class="cross">&times;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Meeting Cost Calculator</td>
+                            <td class="cross">&times;</td>
+                            <td class="check highlight">&check; Free</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">CSV &amp; PDF Export</td>
+                            <td class="cross">&times;</td>
+                            <td class="check">&check; Pro</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Scheduling Links</td>
+                            <td class="check">&check;</td>
+                            <td>Coming soon</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Slack Integration</td>
+                            <td class="check">&check;</td>
+                            <td>Coming soon</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Flexible Meeting Rescheduling</td>
+                            <td class="check">&check;</td>
+                            <td>Coming soon</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Team Dashboard</td>
+                            <td class="check">&check;</td>
+                            <td>Coming soon</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Price</td>
+                            <td>$6.75/mo (gone)</td>
+                            <td class="check highlight"><strong>Free</strong> / $5/mo Pro</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section>
+            <div class="container">
+                <h2>What You Get with CalWizz</h2>
+                <p class="subtitle">Everything you need to understand and optimize your calendar &mdash; most of it free.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="badge-free">Free</span>
+                        <div class="feature-icon">&#x1F6A6;</div>
+                        <h3>Schedule Health Score</h3>
+                        <p>A daily red/yellow/green score that tells you at a glance whether your calendar is healthy or overloaded. Clockwise never had this.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-free">Free</span>
+                        <div class="feature-icon">&#x1F3AF;</div>
+                        <h3>Focus Time Protection</h3>
+                        <p>Set your weekly focus time goal. CalWizz finds optimal gaps and creates calendar holds automatically &mdash; just like Clockwise did.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-free">Free</span>
+                        <div class="feature-icon">&#x1F355;</div>
+                        <h3>Lunch Time Protection</h3>
+                        <p>One toggle. CalWizz creates a recurring lunch hold on your calendar so meetings can't steal your break.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-free">Free</span>
+                        <div class="feature-icon">&#x1F4CA;</div>
+                        <h3>Meeting Analytics</h3>
+                        <p>Meeting hours by day, hourly patterns, attendee breakdown, organization analysis, recurring vs one-off &mdash; the full picture.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-free">Free</span>
+                        <div class="feature-icon">&#x1F9E9;</div>
+                        <h3>Chrome Extension</h3>
+                        <p>Health score badge on your toolbar + a floating widget on Google Calendar. See your score without leaving your calendar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-free">Free</span>
+                        <div class="feature-icon">&#x1F4B0;</div>
+                        <h3>Meeting Cost Calculator</h3>
+                        <p>See what your meetings actually cost in dollars. A viral tool that Clockwise never offered. Try it at calwizz.com/calculator.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-coming">Coming Soon</span>
+                        <div class="feature-icon">&#x1F517;</div>
+                        <h3>Scheduling Links</h3>
+                        <p>Share booking URLs that respect your focus time and preferences. AI-ranked best times, not just "next available."</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="badge-coming">Coming Soon</span>
+                        <div class="feature-icon">&#x1F4AC;</div>
+                        <h3>Slack Integration</h3>
+                        <p>Auto-sync your calendar status, daily schedule forecasts in DM, and DND during focus time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Migration CTA -->
+        <section style="background: var(--cream-dark);">
+            <div class="container">
+                <div class="migration-cta">
+                    <h2>Switch from Clockwise in 2 Minutes</h2>
+                    <p>Connect your Google Calendar, and CalWizz instantly analyzes your schedule. No data migration needed &mdash; we read directly from your calendar.</p>
+                    <a href="https://app.calwizz.com" class="btn btn-primary">Get Started Free</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing">
+            <div class="container">
+                <h2>Simple Pricing</h2>
+                <p class="subtitle">Most Clockwise features are free on CalWizz. Advanced analytics are just $5/month.</p>
+                <div class="pricing-row">
+                    <div class="price-card">
+                        <div class="price">$0</div>
+                        <div class="period">forever</div>
+                        <h3>Free</h3>
+                        <ul>
+                            <li>Schedule health scoring</li>
+                            <li>Focus time auto-blocking</li>
+                            <li>Lunch protection</li>
+                            <li>Meeting analytics</li>
+                            <li>Chrome extension</li>
+                            <li>Multi-calendar support</li>
+                        </ul>
+                        <a href="https://app.calwizz.com" class="btn btn-green" style="width: 100%;">Start Free</a>
+                    </div>
+                    <div class="price-card featured">
+                        <div class="price">$5</div>
+                        <div class="period">/month</div>
+                        <h3>Pro</h3>
+                        <ul>
+                            <li>Everything in Free</li>
+                            <li>12-week meeting trends</li>
+                            <li>AI focus recommendations</li>
+                            <li>Organization breakdown</li>
+                            <li>Advanced filters</li>
+                            <li>CSV &amp; PDF export</li>
+                            <li>Scheduling links (soon)</li>
+                            <li>Slack integration (soon)</li>
+                        </ul>
+                        <a href="https://app.calwizz.com" class="btn btn-green" style="width: 100%;">Try 14 Days Free</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section style="background: var(--cream-dark);">
+            <div class="container">
+                <h2>Questions from Clockwise Users</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Can I migrate my Clockwise data to CalWizz?</h3>
+                        <p>You don't need to. CalWizz reads directly from your Google Calendar via OAuth &mdash; the same events Clockwise used are already there. Just connect your calendar and you're set.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Does CalWizz auto-reschedule flexible meetings like Clockwise?</h3>
+                        <p>Not yet &mdash; this is our #1 priority and is actively in development. Today, CalWizz protects your focus time by creating holds. Automatic meeting rescheduling is coming soon.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is CalWizz really free?</h3>
+                        <p>Yes. The free tier includes schedule health scoring, focus time blocking, lunch protection, meeting analytics, and the Chrome extension. No credit card, no time limit. Pro adds advanced analytics and export for $5/month.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How does the Chrome extension work?</h3>
+                        <p>Install from the Chrome Web Store, sign in with your CalWizz account, and you'll see your health score on the toolbar badge and as a floating widget on calendar.google.com. It updates every 15 minutes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What about Outlook / Microsoft 365 support?</h3>
+                        <p>Currently Google Calendar only. Outlook support is on our roadmap for later this year.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is my calendar data safe?</h3>
+                        <p>CalWizz uses Google OAuth with encrypted token storage. We never store your event content permanently &mdash; analysis happens in real-time. Read our <a href="/privacy" style="color: var(--green-700);">privacy policy</a> for details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Product</h4>
+                <a href="https://app.calwizz.com">Launch App</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/clockwise-alternative">Clockwise Alternative</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="https://blog.calwizz.com">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="mailto:hello@calwizz.com">hello@calwizz.com</a>
+                <a href="https://x.com/CalWizzApp" target="_blank" rel="noopener">@CalWizzApp on X</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow the Build</h4>
+                <a href="https://x.com/ShippingShovels" target="_blank" rel="noopener">@ShippingShovels on X</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="https://someshovels.com" target="_blank" rel="noopener">Some Shovels</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CalWizz. A <a href="https://someshovels.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.9); text-decoration: underline;">Some Shovels</a> project.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+        }
+        function closeMenu() {
+            document.getElementById('navLinks').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
