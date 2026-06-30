@@ -47,21 +47,36 @@ Then open:
 http://127.0.0.1:8000/
 ```
 
-## Agent Entry Points
+## Agent Startup
+
+This repository participates in the local Brain + Workspace + Operating-System + Software Factory ecosystem.
+
+Before meaningful work, run:
+
+```sh
+/Users/adamroberts/Projects/Operating-System/conductor/agent-context.sh
+```
+
+For proposed ideas or tasks, run intake first:
+
+```sh
+/Users/adamroberts/Projects/Operating-System/conductor/idea-intake.sh --task "Describe the proposed work"
+```
 
 Before meaningful work, read:
 
 1. [AGENTS.md](AGENTS.md)
-2. `/Users/adamroberts/Projects/Workspace/docs/architecture-handbook.md`
-3. `/Users/adamroberts/Projects/Operating-System/AGENTS.md`
-4. The Brain project note at `Projects/calwizz-landing.md`
+2. [docs/assistant-startup.md](docs/assistant-startup.md)
+3. `/Users/adamroberts/Projects/Workspace/docs/architecture-handbook.md`
+4. `/Users/adamroberts/Projects/Operating-System/AGENTS.md`
+5. The Brain project note at `Projects/calwizz-landing.md`
 
 ## Related Docs
 
+- [docs/assistant-startup.md](docs/assistant-startup.md)
 - [docs/google-oauth-publishing-guide.md](docs/google-oauth-publishing-guide.md)
 - [docs/calwizz-privacy-policy-update.md](docs/calwizz-privacy-policy-update.md)
 
 ## Notes
 
 The local branch may lag remote. Check status and branch state before editing or pushing.
-
