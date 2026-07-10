@@ -19,8 +19,19 @@ Your privacy policy at calwizz.com/privacy must include:
 - [ ] How users can revoke access (link to Google account permissions)
 - [ ] Contact information
 
-**Template text to add:**
-> CalWizz accesses your Google Calendar data (event titles, times, durations, and attendee counts) solely to calculate meeting costs and provide calendar analytics. We do not store your calendar data on our servers — analysis happens in your browser. You can revoke access anytime at https://myaccount.google.com/permissions.
+**Template text to add** (must match the requested `calendar` read/write scope and the
+live privacy policy at `privacy.html` — do not understate to read-only or client-side-only):
+> CalWizz uses read and write access to your Google Calendar. Read access is used to
+> analyze your events (titles, times, durations, and attendees) and generate calendar
+> analytics. Write access is used only when you enable Focus Time or Lunch Protection,
+> where CalWizz creates clearly labeled events on your behalf and only manages events it
+> created. Calendar analysis runs on our servers during sync; cached calendar data may be
+> temporarily stored to compute analytics and is cleared when you disconnect. We store
+> encrypted OAuth tokens to enable syncing. You can revoke access anytime at
+> https://myaccount.google.com/permissions.
+
+> NOTE: The public privacy policy (`privacy.html`) is the source of truth for these
+> claims. Keep this template, the consent screen, and the FAQ aligned with it.
 
 ### 2. Create Demo Video ⚡ REQUIRED FOR SENSITIVE SCOPES
 Google requires a video showing:
@@ -49,12 +60,18 @@ Fill in:
 - [ ] Developer contact email
 
 ### 4. Verify Scopes
-You're likely using:
-- `calendar.readonly` — needs verification
+The app requests these scopes (see `time-insights-app/google_calendar.py`):
+- `calendar` (full read/write) — needs verification
 - `userinfo.email` — no verification needed
 - `userinfo.profile` — no verification needed
+- `openid` — no verification needed
 
-Calendar scopes = "sensitive" = requires verification.
+The `calendar` scope is read/write, not read-only. Read access powers the
+analytics; write access is used to create/manage CalWizz-tagged events (Focus
+Time, Lunch Protection). Full calendar access is classified as "sensitive/restricted"
+and requires Google verification. Make sure the consent screen, privacy policy, and
+public FAQ all describe read/write access consistently — Google reviewers cross-check
+public claims against requested scopes.
 
 ### 5. Submit for Verification
 - Click "Publish App" in OAuth consent screen
